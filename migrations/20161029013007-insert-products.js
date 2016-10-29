@@ -16,8 +16,8 @@ module.exports = {
     */
     return models.Product.bulkCreate(
         [
-          {productName: "Dog harness", description: "Fun, colorful, comfortable harness for your pampered pooch!", price: 22.99, cost: 12.00, sku: "123-456", upc: 1234567890, invCount: 10 },
-          {productName: "Horse halter", description: "Sturdily built, American made leather halter", price: 84.99, cost: 37.50, sku: "789-123", upc: 9876543219, invCount: 5 }
+          {productName: "Dog harness", description: "Fun, colorful, comfortable harness for your pampered pooch!", price: 22.99, cost: 12.00, sku: "123-456", upc: "023100102962", invCount: 10 },
+          {productName: "Horse halter", description: "Sturdily built, American made leather halter", price: 84.99, cost: 37.50, sku: "789-123", upc: "077627101052", invCount: 5 }
         ]
     )
   },

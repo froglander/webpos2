@@ -1,5 +1,6 @@
 body {
     background-image: url("../images/abstract-blue-background.jpg");
+    padding: 50px;
 }
 
 ./*jumbotron {
@@ -8,16 +9,30 @@ body {
 	margin-top: 10px;
 }*/
 
+.business-header {
+    height: 300px;
 
-
-
-
-
-
-.order-header {
-    background-color: #3333ff;
-    border-color: #0000cc;
 }
+
+#head {
+    display: block;
+    margin: 0 auto;
+}
+
+.tagline {
+    text-shadow: 0 0 10px #000;
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.panel-primary > .panel-heading {
+    background-color: #898c90;
+}
+
 .panel-heading h3 {
     display: inline;
 }
@@ -49,6 +64,9 @@ body {
 
 }
 
+/*#orderHead {
+  background-color: #3e4042;
+}*/
 
 
 #addItem {
@@ -62,7 +80,7 @@ body {
 #btnAdd {
     padding: 7px 12px 7px 12px;
     /* margin-top: 5px;*/
-    margin-left: 55%;
+    margin-left: 50%;
     margin-bottom: 10px;
     /*border-radius: 25px;
     background-color: #00a2d1;
@@ -76,11 +94,7 @@ body {
     color: white;
     border: none;
 }
-/*#text{
-  color: gray;
-  font-style: italic;
-  font-size: 20px;
-}*/
+
 
 #addText {
     color: black;
@@ -108,11 +122,6 @@ body {
 #scanButton:hover {
     color: rgb(52, 54, 66);
 }
-/*#btnAdd:hover{
-  color: rgb(52, 54, 66);
-}*/
-
-
 .pos-jumbo {
     margin-top: 60px;
 }

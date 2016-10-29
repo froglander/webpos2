@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
     price: DataTypes.FLOAT,
     cost: DataTypes.FLOAT,
     sku: DataTypes.STRING,
-    upc: DataTypes.INTEGER,
+    upc: DataTypes.STRING,
     invCount: DataTypes.INTEGER
   }, {
     classMethods: {

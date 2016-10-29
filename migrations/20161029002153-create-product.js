@@ -24,7 +24,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       upc: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       invCount: {
         type: Sequelize.INTEGER
