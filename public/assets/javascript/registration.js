@@ -1,19 +1,19 @@
 $(document).ready(function() {
 
-	$(function() {
+    $(function() {
         $( "#datepicker-13" ).datepicker();
         $( "#datepicker-13" ).datepicker("hide");
 
     });
 
-	$(function() {
+    $(function() {
         // IMPORTANT: Fill in your client key
         var clientKey = "js-9qZHzu2Flc59Eq5rx10JdKERovBlJp3TQ3ApyC4TOa3tA8U7aVRnFwf41RpLgtE7";
-        
+
         var cache = {};
         var container = $("#zip");
         var errorDiv = container.find("div.text-error");
-        
+
         /** Handle successful response */
         function handleResp(data)
         {
@@ -27,7 +27,7 @@ $(document).ready(function() {
                 container.find("input[name='state']").val(data.state);
             }
         }
-        
+
         // Set up event handlers
         container.find("input[name='zipcode']").on("keyup change", function() {
             // Get zip code
@@ -36,7 +36,7 @@ $(document).ready(function() {
             {
                 // Clear error
                 errorDiv.empty();
-                
+
                 // Check cache
                 if (zipcode in cache)
                 {
@@ -46,14 +46,14 @@ $(document).ready(function() {
                 {
                     // Build url
                     var url = "https://www.zipcodeapi.com/rest/"+clientKey+"/info.json/" + zipcode + "/radians";
-                    
+
                     // Make AJAX request
                     $.ajax({
                         "url": url,
                         "dataType": "json"
                     }).done(function(data) {
                         handleResp(data);
-                        
+
                         // Store in cache
                         cache[zipcode] = data;
                     }).fail(function(data) {
@@ -61,7 +61,7 @@ $(document).ready(function() {
                         {
                             // Store in cache
                             cache[zipcode] = json;
-                            
+
                             // Check for error
                             if (json.error_msg)
                                 errorDiv.text(json.error_msg);

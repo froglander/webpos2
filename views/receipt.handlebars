@@ -10,45 +10,52 @@
         <!--Employee ID: {{employee_id}} <br>-->
         <!--<a href="/users/sign-out">Sign Out</a>-->
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav pos-nav">
-                    <li style="line-height: 3.428571;">
-                        Welcome {{email}}! &nbsp;
-                    </li>
-                    <li style="line-height: 3.428571;">
-                         | Employee ID: {{employee_id}} </li>
-                    <li>
-                        <a href="/users/sign-out">Sign Out</a>
-                    </li>
-                </ul>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav pos-nav">
+                        <li style="line-height: 3.428571;">
+                            Welcome {{email}}! &nbsp;
+                        </li>
+                        <li style="line-height: 3.428571;">
+                            | Employee ID: {{employee_id}} </li>
+                        <li>
+                            <a href="/users/sign-out">Sign Out</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
             </div>
-            <!-- /.navbar-collapse -->
+            <!-- /.container -->
+        </nav>
+
+
+        <div class="container">
+            <header class="business-header">
+                <div class="col-lg-12">
+                    <h1 class="tagline"><a href="/" style="text-decoration: none; color: inherit;">Fork-this-POS</a>
+                    </h1>
+                </div>
+                <img id="head" src="../assets/images/shop_cart.png" alt="checkOut">
+
+                <div class="row">
+
+                </div>
+
+            </header>
         </div>
-        <!-- /.container -->
-    </nav>
-
-
-
-
 
         <div class="container">
-            <!-- Jumbotron -->
-            <div class="jumbotron pos-jumbo" style="background-color: rgba(0,0,0,.7); color: white">
-                <h2><span>Fork this POS</span></h2>
-                <span class="pull-right text-muted" id="todayDate"></span>
-                <div class="text-muted">Orlando, FL</div>
-            </div>
+            <hr/>
 
             <div class="row">
                 <div class="col-md-6">
                     <div class="scanForm">
 
-                       <span class="btn btn-success"><a href="/pos">New Order</a></span>
+                        <span class="btn btn-success"><a href="/pos">New Order</a></span>
 
                     </div>
                 </div>
