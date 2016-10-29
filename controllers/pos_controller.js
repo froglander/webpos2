@@ -107,4 +107,38 @@ router.post('/delete', function (req, res) {
     });
 });
 
-    module.exports = router;
+router.post('/clear', function(req, res) {
+    orderArray.length=0;
+    res.render('index', {
+        // To make index.handlebars realize user is still logged in
+        // when adding items
+        logged_in: req.session.logged_in,
+        email: req.session.username,
+        employee_id: req.session.employee_id,
+        data: orderArray
+
+    });
+});
+
+router.post('/checkout', function(req, res) {
+    // render receipt
+    var subtotal = 0;
+    for (var i = 0; i < orderArray.length; i++) {
+        subtotal += orderArray[i].price * orderArray[i].qty;
+    }
+    // Running out of time so hardcoding tax rate, ideally would be a setting the user could set
+    var tax = subtotal * .07;
+    var total = subtotal + tax;
+
+   res.render('receipt', {
+       logged_in: req.session.logged_in,
+       email: req.session.username,
+       employee_id: req.session.employee_id,
+       data: orderArray,
+       subtotal: subtotal.toFixed(2),
+       tax: tax.toFixed(2),
+       total: total.toFixed(2)
+   })
+});
+
+module.exports = router;

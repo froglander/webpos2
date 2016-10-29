@@ -18,9 +18,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav pos-nav">
                     <li style="line-height: 3.428571;">
-                        Welcome {{email}}!
+                        Welcome {{email}}! 
                     </li>
-                    <li style="line-height: 3.428571;"> | Employee ID: {{employee_id}} </li>
+                    <li style="line-height: 3.428571;">
+                         | Employee ID: {{employee_id}} </li>
                     <li>
                         <a href="/users/sign-out">Sign Out</a>
                     </li>
@@ -60,8 +61,7 @@
                 <div class="col-md-6">
                     <div class="panel panel-primary order-summary">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Order Summary</h3>
-                            <!--<div class="label label-danger total">Total: $<span id="runningTotal">0.00</span></div>-->
+                            <h3 class="panel-title">Receipt</h3>
                         </div>
                         <div class="panel-body">
                             <table class="table">
@@ -78,24 +78,13 @@
                                         <td>{{this.productName}}</td>
                                         <td>{{this.qty}}</td>
                                         <td>{{this.price}}</td>
-                                        <td>{{> delete-item}}</td>
                                     </tr>
-
                                 {{/each}}
                                 </tbody>
                             </table>
-                        </div>
-                        <div class="pull-right">
-                            <form class="create-update-form form-inline" action="/pos/clear" method="POST">
-                                <button class="btn btn-default" id="clearOrder" type="submit">Clear</button>
-                            </form>
-                            <form class="create-update-form form-inline" action="/pos/checkout" method="POST">
-                                <button class="btn btn-danger" id="checkout" type="submit">Checkout</button>
-                            </form>
-
-
-                            <!--<span class="btn btn-danger" id="checkBtn" click="checkout()">Checkout</span>-->
-                            <!--<span class="btn btn-danger" id="checkout">Checkout</span>-->
+                            <div class="label label-danger">Subtotal: ${{this.subtotal}}</div>
+                            <div class="label label-danger">Tax: ${{this.tax}}</div>
+                            <div class="label label-danger">Total: ${{this.total}}</div>
                         </div>
                     </div>
                 </div>
