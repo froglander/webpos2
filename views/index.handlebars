@@ -1,0 +1,72 @@
+<div>
+    {{#unless logged_in}}
+        <a href="/users/sign-in">Sign In</a>
+        <a href="/users/new">Register</a>
+    {{/unless}}
+
+    {{#if logged_in}}
+        Welcome {{email}}! <br>
+        Employee ID: {{employee_id}} <br>
+        <a href="/users/sign-out">Sign Out</a>
+
+        <div class="container">
+            <!-- Jumbotron -->
+            <div class="jumbotron" style="background-color: rgba(0,0,0,.7); color: white">
+                <h2><span>Fork this POS</span></h2>
+                <span class="pull-right text-muted" id="todayDate"></span>
+                <div class="text-muted">Orlando, FL</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="scanForm">
+                        <form class="create-update-form" action="/pos/add" method="POST">
+                            <div id="text"><span id="scanText">Enter a UPC code or scan one below. </span></div>
+                            <div class="form-group">
+                                <label id="addText" for="addItem"></label>
+                                <input type="text" id="addItem" name="addItem" placeholder="Add Item #">
+                            </div>
+                            <div id="itemErrMsg"></div>
+                            <button class="btn btn-success" id="btnAdd" type="submit">Add Item to Order</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-primary order-summary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Order Summary</h3>
+                            <div class="label label-danger total">Total: $<span id="runningTotal">0.00</span></div>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table">
+                                <thead>
+                                <th>Sku</th>
+                                <th>Description</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                </thead>
+                                <tbody class="table-striped" id="orderSummaryBody">
+                                {{#each data}}
+                                    <tr>
+                                        <td>{{this.sku}}</td>
+                                        <td>{{this.productName}}</td>
+                                        <td>{{this.qty}}</td>
+                                        <td>{{this.price}}</td>
+                                        <td>{{> delete-item}}</td>
+                                    </tr>
+
+                                {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pull-right">
+                            <span class="btn btn-default" id="clearOrder">Clear</span>
+                            <span class="btn btn-danger" id="checkBtn" click="checkout()">Checkout</span>
+                            <!--<span class="btn btn-danger" id="checkout">Checkout</span>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/if}}
+</div>

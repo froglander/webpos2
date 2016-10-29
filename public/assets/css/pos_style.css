@@ -1,0 +1,115 @@
+body {
+    background-image: url("../images/abstract-blue-background.jpg");
+}
+
+./*jumbotron {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-top: 10px;
+}*/
+
+
+
+
+
+
+
+.order-header {
+    background-color: #3333ff;
+    border-color: #0000cc;
+}
+.panel-heading h3 {
+    display: inline;
+}
+.total {
+    float: right;
+    font-size: 15px;
+    padding: 5px;
+    font-weight: normal;
+}
+.order-summary {
+    background-color: rgba(0,0,0,.7);
+    color: white;
+    border-color: #33cc12;
+}
+
+#clearOrder {
+    padding: 7px 12px 7px 12px;
+    margin-top: 15px;
+
+}
+
+#checkBtn {
+    padding: 7px 12px 7px 12px;
+    margin-top: 15px;
+}
+
+
+.buttons {
+
+}
+
+
+
+#addItem {
+    width: 75%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#btnAdd {
+    padding: 7px 12px 7px 12px;
+    /* margin-top: 5px;*/
+    margin-left: 55%;
+    margin-bottom: 10px;
+    /*border-radius: 25px;
+    background-color: #00a2d1;
+    color: white;
+    border: none;*/
+}
+#newSearchButton{
+    padding: 7px 12px 7px 12px;
+    border-radius: 25px;
+    background-color: gray;
+    color: white;
+    border: none;
+}
+/*#text{
+  color: gray;
+  font-style: italic;
+  font-size: 20px;
+}*/
+
+#addText {
+    color: black;
+}
+
+#scanText {
+    margin: 30px;
+    color: #000099;
+    font-style: italic;
+    font-size: 20px;
+
+}
+
+#scanButton {
+    padding: 7px 12px 7px 12px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    background-color: gray;
+    color: white;
+    border: none;
+}
+
+#scanButton:hover {
+    color: rgb(52, 54, 66);
+}
+/*#btnAdd:hover{
+  color: rgb(52, 54, 66);
+}*/
+
+

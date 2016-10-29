@@ -1,0 +1,30 @@
+{
+  "name": "webpos2",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "createperson": "sequelize model:create --name Person --attributes firstName:string,lastName:string,street:string,city:string,state:string,zip:string,phone:string,email:string",
+    "createvendor": "sequelize model:create --name Vendor --attributes companyName:string",
+    "createcustomer": "sequelize model:create --name Customer --attributes preferredContactMethod:string",
+    "createemp": "sequelize model:create --name Employee --attributes startDate:dateonly,endDate:dateonly,salary:float,role:string",
+    "createproduct": "sequelize model:create --name Product --attributes productName:string,description:text,price:float,cost:float,sku:string,upc:integer,invCount:integer",
+    "createprodtransaction": "sequelize model:create --name ProductTransaction --attributes quantity:integer,transactionPrice:float",
+    "createreceipt": "sequelize model:create --name Receipt --attributes receiptTimestamp:date",
+    "createdb": "npm run createperson && npm run createvendor && npm run createcustomer && npm run createemp && npm run createproduct && npm run createprodtransaction && npm run createreceipt"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.13.4",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.14.1",
+    "method-override": "^2.3.6",
+    "morgan": "^1.7.0",
+    "mysql": "^2.11.1",
+    "sequelize": "^3.24.6",
+    "serve-favicon": "~2.3.0"
+  }
+}

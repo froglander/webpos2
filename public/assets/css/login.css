@@ -1,0 +1,77 @@
+body {
+    background-image: url("../images/abstract-blue-background.jpg");
+
+
+
+*{
+ margin:0px;
+ padding:0px;
+}
+body {
+    background-color: #f9f9f9;
+}
+
+
+#header {
+    background-color: #00a2d1;
+ height:50px;
+ text-align:center;
+}
+#header a
+{
+ color:#fff;
+ text-decoration:none;
+ font-size:35px;
+ font-family:Tahoma, Geneva, sans-serif;
+ position:relative;
+}
+
+#text-1 {
+    color: white;
+
+}
+
+#pad-top {
+    margin: 30px 0px 20px 0px;
+}
+
+#create-update-form {
+ background:#fff;
+    border: 1px solid #DFDCDC;
+    border-radius: 15px 15px 15px 15px;
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 25px 50px 10px;
+    width: 350px;
+ font-family:Tahoma, Geneva, sans-serif;
+}
+
+#create-update-form .form-group {
+    background: url("form-divider.gif") repeat-x scroll left top transparent;
+    display: inline-block;
+    padding: 8px 10px;
+    width: 340px;
+}
+
+
+#create-update-form .form-group input{
+    margin: 10px 0;
+    height: 40px;
+ width:100%;
+ border:solid #cdcdcd 1px;
+ border-radius:3px;
+ padding-left:10px;
+}
+
+#create-update-form .submit {
+    padding: 10px;
+    height: 40px !important;
+ background:#00a2d1;
+ color:#fff;
+ font-weight:bolder;
+ border:solid #cdcdcd 1px;
+ border-radius:3px;
+}
+
