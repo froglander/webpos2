@@ -1,17 +1,43 @@
 <div>
+
     {{#unless logged_in}}
         <a href="/users/sign-in">Sign In</a>
         <a href="/users/new">Register</a>
     {{/unless}}
 
     {{#if logged_in}}
-        Welcome {{email}}! <br>
-        Employee ID: {{employee_id}} <br>
-        <a href="/users/sign-out">Sign Out</a>
+        <!--Welcome {{email}}! <br>-->
+        <!--Employee ID: {{employee_id}} <br>-->
+        <!--<a href="/users/sign-out">Sign Out</a>-->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        Welcome {{email}}!
+                    </li>
+                    <li>Employee ID: {{employee_id}} </li>
+                    <li>
+                        <a href="/users/sign-out">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+
+
 
         <div class="container">
             <!-- Jumbotron -->
-            <div class="jumbotron" style="background-color: rgba(0,0,0,.7); color: white">
+            <div class="jumbotron pos-jumbo" style="background-color: rgba(0,0,0,.7); color: white">
                 <h2><span>Fork this POS</span></h2>
                 <span class="pull-right text-muted" id="todayDate"></span>
                 <div class="text-muted">Orlando, FL</div>
