@@ -7,7 +7,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   // Send our static landing html page
   //res.sendFile(path.resolve(__dirname, '../public/landing.html'));
-  res.sendFile(path.resolve(process.cwd() + '../public/landing.html'));
+  res.sendFile(path.resolve(process.cwd() + '/public/landing.html'));
 });
 
 module.exports = router;
