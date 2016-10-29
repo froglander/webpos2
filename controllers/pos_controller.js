@@ -138,7 +138,7 @@ router.post('/checkout', function(req, res) {
        subtotal: subtotal.toFixed(2),
        tax: tax.toFixed(2),
        total: total.toFixed(2)
-   })
+   });
 });
 
 module.exports = router;
